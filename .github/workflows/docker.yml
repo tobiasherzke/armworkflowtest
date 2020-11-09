@@ -19,5 +19,5 @@ jobs:
     - run: sudo systemctl restart binfmt-support.service
     - run: sudo systemctl status binfmt-support.service
     - name: docker
-      run: docker run --rm -i hoertech/docker-buildenv:liblsl_armv7-linux-gcc-7 /bin/date
+      run: docker run --rm -i -v /usr/bin/qemu-arm-static:/usr/bin/qemu-arm-static /hoertech/docker-buildenv:liblsl_armv7-linux-gcc-7 /bin/date
       
