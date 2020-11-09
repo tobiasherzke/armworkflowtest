@@ -17,4 +17,4 @@ jobs:
     - run: sudo cp qemu-arm-static.conf /etc/binfmt.d
     - run: sudo systemctl restart systemd-binfmt
     - name: docker
-      run: docker run --rm -i -v /usr/bin/qemu-arm-static:/usr/bin/qemu-arm-static hoertech/docker-buildenv:liblsl_armv7-linux-gcc-7 /bin/date
+      run: docker run --rm -i hoertech/docker-buildenv:liblsl_armv7-linux-gcc-7 /bin/date
