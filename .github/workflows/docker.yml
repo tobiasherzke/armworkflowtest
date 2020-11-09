@@ -1,0 +1,16 @@
+name: Docker test
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker
+      run: docker run --rm hoertech/docker-buildenv:liblsl_armv7-linux-gcc-7 uname -a
+      
